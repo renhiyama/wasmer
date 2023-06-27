@@ -26,15 +26,8 @@ static RUST_LOG: Lazy<String> = Lazy::new(|| {
 });
 
 fn wasmer_run_unstable() -> std::process::Command {
-    let mut cmd = std::process::Command::new("cargo");
-    cmd.arg("run")
-        .arg("--quiet")
-        .arg("--package=wasmer-cli")
-        .arg("--features=singlepass,cranelift,compiler")
-        .arg("--color=never")
-        .arg("--")
-        .arg("run");
-    cmd.env("RUST_LOG", &*RUST_LOG);
+    let mut cmd = std::process::Command::new(get_wasmer_path());
+    cmd.arg("run").env("RUST_LOG", &*RUST_LOG);
     cmd
 }
 

@@ -1,4 +1,3 @@
-use anyhow::bail;
 use assert_cmd::prelude::OutputAssertExt;
 use predicates::str::contains;
 use tempfile::TempDir;

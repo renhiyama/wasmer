@@ -107,7 +107,7 @@ You can start by running
 embeddable Javascript engine:
 
 ```bash
-$ wasmer run saghul/quickjs --command=qjs
+$ wasmer run saghul/quickjs --command-name=qjs
 QuickJS - Type "\h" for help
 qjs > console.log("hello world");
 hello world
